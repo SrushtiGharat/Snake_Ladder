@@ -51,7 +51,7 @@ namespace Snake_Ladder
             if(player1Position == 10)
                 Console.WriteLine("Player 1 WINS!!");
             else
-                Console.WriteLine("Player 1 WINS!!");
+                Console.WriteLine("Player 2 WINS!!");
         }
 
         static int GetPlayerPosition(int playerPosition,int dieNo,int checkOption)
