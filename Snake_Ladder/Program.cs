@@ -8,7 +8,8 @@ namespace Snake_Ladder
         {
             Console.WriteLine("Welcome to Snake and Ladder game");
             int FINAL_POSITION = 100;
-            
+
+            int countDieRoll = 0;
             int player1Position = 0;
             Console.WriteLine("Player1 starting position :" + player1Position);
 
@@ -16,6 +17,7 @@ namespace Snake_Ladder
             while(player1Position < FINAL_POSITION)
             {
                 int dieNo = random.Next(1, 7);
+                countDieRoll++;
                 Console.WriteLine("No on die :" + dieNo);
 
                 int checkOption = random.Next(0, 3);
@@ -47,7 +49,7 @@ namespace Snake_Ladder
                 }
                 Console.WriteLine("Your current position is :" + player1Position);
             }
-            
+            Console.WriteLine("Die Roll Count :" + countDieRoll);
         }
     }
 }
