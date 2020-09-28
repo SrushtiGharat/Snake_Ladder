@@ -15,6 +15,26 @@ namespace Snake_Ladder
             Random random = new Random();
             int dieNo = random.Next(1, 7);
             Console.WriteLine("No on die :" + dieNo);
+
+            int checkOption = random.Next(0, 3);
+            switch (checkOption)
+            {
+                case 0 :
+                    Console.WriteLine("No Play");
+                    break;
+                case 1:
+                    Console.WriteLine("Ladder");
+                    player1Position = player1Position + dieNo;
+                    break;
+                case 2:
+                    Console.WriteLine("Snake");
+                    player1Position = player1Position - dieNo;
+                    break;
+                default:
+                    Console.WriteLine("No such option");
+                    break;
+            }
+            Console.WriteLine("Your current position is :" + player1Position);
         }
     }
 }
