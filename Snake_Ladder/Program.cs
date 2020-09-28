@@ -13,7 +13,7 @@ namespace Snake_Ladder
             Console.WriteLine("Player1 starting position :" + player1Position);
 
             Random random = new Random();
-            while(player1Position <= 100)
+            while(player1Position < FINAL_POSITION)
             {
                 int dieNo = random.Next(1, 7);
                 Console.WriteLine("No on die :" + dieNo);
@@ -27,6 +27,11 @@ namespace Snake_Ladder
                     case 1:
                         Console.WriteLine("Ladder");
                         player1Position = player1Position + dieNo;
+                        if(player1Position > FINAL_POSITION)
+                        {
+                            player1Position = player1Position - dieNo;
+                        }
+                        
                         break;
                     case 2:
                         Console.WriteLine("Snake");
