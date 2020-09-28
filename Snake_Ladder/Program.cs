@@ -16,7 +16,7 @@ namespace Snake_Ladder
             int player1Position = 0;
             int player2Position = 0;
             Console.WriteLine("Player1 starting position :" + player1Position);
-            Console.WriteLine("Player1 starting position :" + player1Position);
+            Console.WriteLine("Player1 starting position :" + player2Position);
 
             Random random = new Random();
             
